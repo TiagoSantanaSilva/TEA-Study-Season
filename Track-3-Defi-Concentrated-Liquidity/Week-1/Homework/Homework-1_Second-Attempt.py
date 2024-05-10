@@ -117,14 +117,14 @@ for i in range(NUMBER_OF_TRADES):
 
     # Plotting integral area
     sectionx = np.linspace(xtrade[i][0], xtrade[i][1], 500)
-    sectiondydx = np.linspace(yprice_curve[i][0], yprice_curve[i][1], 500)
-    plt.fill_between(sectionx,sectiondydx )
+    section_dydx = -f(sectionx)/sectionx 
+    ax2.fill_between(sectionx, 0, section_dydx, alpha=0.5) 
     
     # Adding text
     # Calculate the midpoint of the x and y ranges
     mid_x = (xtrade[i][0] + xtrade[i][1]) / 2
     mid_y = yprice_curve[i][1] / 2 
-    plt.text(mid_x, mid_y, '|Δy|', horizontalalignment='center', verticalalignment='center', fontsize=10, color='black')
+    ax2.text(mid_x, mid_y, '|Δy|', horizontalalignment='center', verticalalignment='center', fontsize=10, color='black')
     
     # Adding arrows
     arrow4 = FancyArrowPatch((xtrade[i][0], yprice_curve[i][0]), (xtrade[i][0], yprice_curve[i][1]), arrowstyle='-|>,head_width=2,head_length=2', color='gold', linewidth=2)
