@@ -38,7 +38,7 @@ def trade():
     ytrade.append([y, nexty])
     yprice_curve.append([-y/x, -nexty/nextx])
     x, y = nextx, nexty
-
+    
 initializeAMM()
 for _ in range(NUMBER_OF_TRADES):
     trade()
@@ -102,11 +102,12 @@ for i in range(NUMBER_OF_TRADES):
     ax2.set_ylabel("dy/dx")
     ax2.grid(True)
     
+    
     # Detailed legend as in the original code
     legend_elements_ax2 = [
         mlines.Line2D([], [], color='none', marker='o', markerfacecolor='blue', markeredgecolor='blue', markersize=10, label=f'Before Trade ({round(xtrade[i][0],2)}, {round(yprice_curve[i][0],2)})'),
         mlines.Line2D([], [], color='none', marker='o', markerfacecolor='red', markeredgecolor='red', markersize=10, label=f'After Trade ({round(xtrade[i][1],2)}, {round(yprice_curve[i][1],2)})'),
-        mlines.Line2D([], [], color='#2596be', markeredgecolor='light-blue', markersize=10, label=r"dy/dx = -y/x"),
+        mlines.Line2D([], [], color='orange', markersize=10, label=r"dy/dx = -y/x"),
         mlines.Line2D([], [], color='none', label=f'Δx = {xtrade[i][1] - xtrade[i][0]:.2f}'),
         mlines.Line2D([], [], color='none', label=f'|Δy| = {abs(ytrade[i][1] - ytrade[i][0]):.2f}'),
         mlines.Line2D([], [], color='none', label=f'Initial Spot Price= {ytrade[i][0]/xtrade[i][0]:.2f}'),
@@ -115,15 +116,15 @@ for i in range(NUMBER_OF_TRADES):
     ]
     ax2.legend(handles=legend_elements_ax2, loc='best', shadow=True, fancybox=True, title='Legend', title_fontsize='12', fontsize='10', framealpha=1)
 
-    # Plotting integral area
+    # Plotting the integral area
     sectionx = np.linspace(xtrade[i][0], xtrade[i][1], 500)
     section_dydx = -f(sectionx)/sectionx 
-    ax2.fill_between(sectionx, 0, section_dydx, alpha=0.5) 
-    
+    ax2.fill_between(sectionx, section_dydx, alpha=0.5) 
+
     # Adding text
     # Calculate the midpoint of the x and y ranges
     mid_x = (xtrade[i][0] + xtrade[i][1]) / 2
-    mid_y = yprice_curve[i][1] / 2 
+    mid_y = yprice_curve[i][1] / 2 + 0.1
     ax2.text(mid_x, mid_y, '|Δy|', horizontalalignment='center', verticalalignment='center', fontsize=10, color='black')
     
     # Adding arrows
