@@ -38,9 +38,6 @@ def trade():
     ytrade.append([y, nexty])
     yprice_curve.append([-y/x, -nexty/nextx])
     x, y = nextx, nexty
-    
-
-
 
 initializeAMM()
 for _ in range(NUMBER_OF_TRADES):
@@ -105,7 +102,6 @@ for i in range(NUMBER_OF_TRADES):
     ax2.set_ylabel("dy/dx")
     ax2.grid(True)
     
-    
     # Detailed legend as in the original code
     legend_elements_ax2 = [
         mlines.Line2D([], [], color='none', marker='o', markerfacecolor='blue', markeredgecolor='blue', markersize=10, label=f'Before Trade ({round(xtrade[i][0],2)}, {round(yprice_curve[i][0],2)})'),
@@ -119,6 +115,7 @@ for i in range(NUMBER_OF_TRADES):
     ]
     ax2.legend(handles=legend_elements_ax2, loc='best', shadow=True, fancybox=True, title='Legend', title_fontsize='12', fontsize='10', framealpha=1)
 
+    # Plotting integral area
     sectionx = np.linspace(xtrade[i][0], xtrade[i][1], 500)
     sectiondydx = np.linspace(yprice_curve[i][0], yprice_curve[i][1], 500)
     plt.fill_between(sectionx,sectiondydx )
