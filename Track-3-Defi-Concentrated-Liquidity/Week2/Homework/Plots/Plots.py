@@ -174,7 +174,7 @@ plots = [
     ],
     [
         Plots(# 1 0
-            text1Text = 'X*Y\n=\nX0*Y0', 
+            text1Text = 'X*Y\n=\nInvariant', 
             # ha='center', va='center', fontsize=12, fontstyle='italic',fontweight='bold'
             text2YCoords=0.3, 
             text2Text='The Reference Bonding Curve',
@@ -205,7 +205,7 @@ plots = [
     ],
     [
         Plots(# 2 0
-            text1Text = 'Xv*Yv\n=\nA^2*INVARIANT', 
+            text1Text = 'Xv*Yv\n=\nA^2*Invariant', 
             # ha='center', va='center', fontsize=12, fontstyle='italic',fontweight='bold'
             text2YCoords=0.3, 
             text2Text='The Bancor v2 Virtual Curve'
