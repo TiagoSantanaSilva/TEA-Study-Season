@@ -1,4 +1,4 @@
-Homework for Week 2
+**Homework for Week 2**
 
   a) Mathematical Demonstration
 
