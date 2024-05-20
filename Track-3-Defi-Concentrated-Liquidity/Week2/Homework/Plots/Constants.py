@@ -14,9 +14,3 @@ PHIGH = (INVARIANT * ASQUARE / (XV0 - X0)) / (XV0 - X0)
 
 PLOW_POINT = (X0 * (math.sqrt(ASQUARE) - 1), ASQUARE * Y0 / (math.sqrt(ASQUARE) - 1))
 PHIGH_POINT = (ASQUARE * X0 / (math.sqrt(ASQUARE) - 1), Y0 * (math.sqrt(ASQUARE) - 1))
-
-DIST_PHIGH_Y = (math.sqrt(ASQUARE) * Y0) / (math.sqrt(ASQUARE) - 1)
-DIST_PHIGH_X = X0 * (math.sqrt(ASQUARE) - 1) / math.sqrt(ASQUARE)
-
-DIST_PLOW_Y = (Y0 * (math.sqrt(ASQUARE) - 1)) / math.sqrt(ASQUARE)
-DIST_PLOW_X = (math.sqrt(ASQUARE) * X0) / (math.sqrt(ASQUARE) - 1)
