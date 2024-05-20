@@ -2,4 +2,4 @@
 
   a) Mathematical Demonstration
 
-  b) Plotting 3 bonding curves
+  b) Plotting with 3 different curve functions
