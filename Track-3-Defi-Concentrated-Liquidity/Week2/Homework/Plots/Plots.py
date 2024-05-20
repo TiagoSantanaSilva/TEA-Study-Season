@@ -93,7 +93,7 @@ class Plots:
             elif  j == 3:
                 self.scatterPointsX=[yvtrade[n][0], yvtrade[n][1], np.linspace(PHIGH_POINT[0], PLOW_POINT[0], 500)[0], np.linspace(PHIGH_POINT[0], PLOW_POINT[0], 500)[-1]] 
                 self.scatterPointsY=[xvprice_curve[n][0], xvprice_curve[n][1], dxvdyv(np.linspace(PHIGH_POINT[0], PLOW_POINT[0], 500), INVARIANT, ASQUARE)[0], dxvdyv(np.linspace(PHIGH_POINT[0], PLOW_POINT[0], 500), INVARIANT, ASQUARE)[-1]]  
-                self.scatterColors=['blue', 'red', 'orange', 'orange'] 
+                self.scatterColors=['blue', 'red', 'green', 'green'] 
                 self.scatterEdgeColors=['blue', 'red', 'blue', 'red']
                 self.arrow1 = ((yvtrade[n][0], xvprice_curve[n][0]), (yvtrade[n][0], xvprice_curve[n][1]))
                 self.arrow2 = ((yvtrade[n][0], xvprice_curve[n][1]), (yvtrade[n][1], xvprice_curve[n][1]))
