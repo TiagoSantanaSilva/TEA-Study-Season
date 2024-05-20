@@ -100,8 +100,8 @@ class Plots:
                 self.arrow3 = ((yvtrade[n][0], xvprice_curve[n][0]), (yvtrade[n][1], xvprice_curve[n][1]))
                 self.integralX = np.linspace(yvtrade[n][0], yvtrade[n][1], 10000)
                 self.integralY = dxvdyv(np.linspace(yvtrade[n][0], yvtrade[n][1], 10000), INVARIANT, ASQUARE)
-                self.legendXtraLine1 = {'label':f'vP_Bound1 ({round(PLOW_POINT[0],2)} , -{round(PHIGH,2)})', 'markerfacecolor':'orange', 'markeredgecolor':'red'}
-                self.legendXtraLine2 = {'label':f'vP_Bound2 ({round(PLOW_POINT[1],2)} , -{round(PLOW,2)})', 'markerfacecolor':'orange', 'markeredgecolor':'blue'}
+                self.legendXtraLine1 = {'label':f'vP_Bound1 ({round(PLOW_POINT[0],2)} , -{round(PHIGH,2)})', 'markerfacecolor':'green', 'markeredgecolor':'red'}
+                self.legendXtraLine2 = {'label':f'vP_Bound2 ({round(PLOW_POINT[1],2)} , -{round(PLOW,2)})', 'markerfacecolor':'green', 'markeredgecolor':'blue'}
                 self.legendXtraLine3 = {'label':f'|ΔX|={abs(xvtrade[n][1] - xvtrade[n][0]):.2f}'} 
         elif i == 3:
             if  j == 1:
