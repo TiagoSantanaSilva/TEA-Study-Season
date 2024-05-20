@@ -42,9 +42,9 @@ def trade():
     nextx = nexty = 0
     nextxv = nextyv = 1 # JUST A RANDOM NUMBER ABOVE 0
     nextX = nextY = 0
-    deltaxxv = norm.rvs(loc=0, scale=80, size=1)
     
     while nextx <= 0 or nexty <= 0 or nextxv <= 0 or nextyv <= 0 or XV0-nextxv>=X0 or YV0-nextyv>=Y0 or nextX <= 0 or nextY <= 0 : # MAKING SURE THE TRADES TAKE PLACE WITHIN THE PRICE RANGES
+        deltaxxv = norm.rvs(loc=0, scale=80, size=1)
         nextx = x + deltaxxv[0]
         nexty = INVARIANT / nextx if nextx != 0 else 0
         
