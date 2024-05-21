@@ -65,10 +65,10 @@ class Plots:
                 self.legendXtraLine1 = {'label':f'|ΔX| = {abs(xtrade[n][1] - xtrade[n][0]):.2f}'}
         elif i == 2:
             if  j == 1:
-                self.scatterPointsX = [PHIGH_POINT[0], PLOW_POINT[0],xvtrade[n][0], xvtrade[n][1]] 
-                self.scatterPointsY = [PHIGH_POINT[1], PLOW_POINT[1],yvtrade[n][0], yvtrade[n][1]]  
-                self.scatterColors=['white',  'white', 'blue','red'] 
-                self.scatterEdgeColors=['blue', 'red', 'blue', 'red']
+                self.scatterPointsX = [xvtrade[n][0], xvtrade[n][1],PHIGH_POINT[0], PLOW_POINT[0]] 
+                self.scatterPointsY = [yvtrade[n][0], yvtrade[n][1],PHIGH_POINT[1], PLOW_POINT[1]]  
+                self.scatterColors=[ 'blue','red', 'white', 'white']
+                self.scatterEdgeColors=['blue', 'red', 'blue','red']
                 self.arrow1 = ((xvtrade[n][0], yvtrade[n][0]), (xvtrade[n][0], yvtrade[n][1]))
                 self.arrow2 = ((xvtrade[n][0], yvtrade[n][1]), (xvtrade[n][1], yvtrade[n][1]))
                 self.arrow3 = ((xvtrade[n][0], yvtrade[n][0]), (xvtrade[n][1], yvtrade[n][1]))
@@ -105,10 +105,10 @@ class Plots:
                 self.legendXtraLine3 = {'label':f'|ΔX|={abs(xvtrade[n][1] - xvtrade[n][0]):.2f}'} 
         elif i == 3:
             if  j == 1:
-                self.scatterPointsX = [(X0*(2*math.sqrt(ASQUARE)-1))/(math.sqrt(ASQUARE)-1), 0, Xtrade[n][0], Xtrade[n][1]]
-                self.scatterPointsY = [0, (Y0*(2*math.sqrt(ASQUARE)-1))/(math.sqrt(ASQUARE)-1), Ytrade[n][0], Ytrade[n][1]]  
-                self.scatterColors=['white',  'white', 'blue','red']
-                self.scatterEdgeColors=['blue', 'red', 'blue', 'red']
+                self.scatterPointsX = [Xtrade[n][0], Xtrade[n][1] ,(X0*(2*math.sqrt(ASQUARE)-1))/(math.sqrt(ASQUARE)-1), 0]
+                self.scatterPointsY = [Ytrade[n][0], Ytrade[n][1] ,0, (Y0*(2*math.sqrt(ASQUARE)-1))/(math.sqrt(ASQUARE)-1)]  
+                self.scatterColors=[ 'blue','red', 'white', 'white']
+                self.scatterEdgeColors=['blue', 'red', 'blue','red']
                 self.arrow1 = ((Xtrade[n][0], Ytrade[n][0]), (Xtrade[n][0], Ytrade[n][1]))
                 self.arrow2 = ((Xtrade[n][0], Ytrade[n][1]), (Xtrade[n][1], Ytrade[n][1]))
                 self.arrow3 = ((Xtrade[n][0], Ytrade[n][0]), (Xtrade[n][1], Ytrade[n][1]))
