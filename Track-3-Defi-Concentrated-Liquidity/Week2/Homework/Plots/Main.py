@@ -99,7 +99,7 @@ def plot_trades(xtrade,ytrade, xprice_curve, yprice_curve, xvtrade, yvtrade, xvp
                         ax_elements = [
                             mlines.Line2D([], [], color='none', marker='o', markerfacecolor='blue', markeredgecolor='blue', markersize=5, label=f'{round(plots[i][j].scatterPointsX[0],2)}, {round(plots[i][j].scatterPointsY[0],2)}'),
                             mlines.Line2D([], [], color='none', marker='o', markerfacecolor='red', markeredgecolor='red', markersize=5, label=f'{round(plots[i][j].scatterPointsX[1],2)}, {round(plots[i][j].scatterPointsY[1],2)}'),
-                            mlines.Line2D([], [], color='none', label=plots[i][j].legendXtraLine1['label'])
+                            mlines.Line2D([], [], color='none', marker='s', markerfacecolor='#c6c6cd', markeredgecolor='#c6c6cd', markersize=5, label=plots[i][j].legendXtraLine1['label'])
                         ] 
                     elif i>=2 and j>=2:
                         ax_elements = [
@@ -107,7 +107,7 @@ def plot_trades(xtrade,ytrade, xprice_curve, yprice_curve, xvtrade, yvtrade, xvp
                             mlines.Line2D([], [], color='none', marker='o', markerfacecolor='red', markeredgecolor='red', markersize=5, label=f'{round(plots[i][j].scatterPointsX[1],2)}, {round(plots[i][j].scatterPointsY[1],2)}'),
                             mlines.Line2D([], [], color='none', marker='o', markerfacecolor=plots[i][j].legendXtraLine1['markerfacecolor'], markeredgecolor=plots[i][j].legendXtraLine1['markeredgecolor'], label=plots[i][j].legendXtraLine1['label']),
                             mlines.Line2D([], [], color='none', marker='o', markerfacecolor=plots[i][j].legendXtraLine2['markerfacecolor'], markeredgecolor=plots[i][j].legendXtraLine2['markeredgecolor'], label=plots[i][j].legendXtraLine2['label']),
-                            mlines.Line2D([], [], color='none', label=plots[i][j].legendXtraLine3['label'])
+                            mlines.Line2D([], [], color='none', marker='s', markerfacecolor='#c6c6cd', markeredgecolor='#c6c6cd', markersize=5, label=plots[i][j].legendXtraLine3['label'])
                         ]
                         
                     elif i>=2 and j==1:
