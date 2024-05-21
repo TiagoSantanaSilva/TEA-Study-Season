@@ -39,7 +39,11 @@ def initializeAMM():
 
 def trade():
     global x, y, yprice_curve, xprice_curve, xtrade, ytrade, xv, yv, yvprice_curve, xvprice_curve, xvtrade, yvtrade, X, Y, Yprice_curve, Xprice_curve, Xtrade, Ytrade
-    
+    nextx = nexty = 0
+    nextxv = nextyv = 1 # JUST A RANDOM NUMBER ABOVE 0
+    nextX = nextY = 0
+
+
     while nextx <= 0 or nexty <= 0 or nextxv <= 0 or nextyv <= 0 or XV0-nextxv>=X0 or YV0-nextyv>=Y0 or nextX <= 0 or nextY <= 0 : # MAKING SURE THE TRADES TAKE PLACE WITHIN THE PRICE RANGE
         nextx = nexty = 0
         nextxv = nextyv = 1 # JUST A RANDOM NUMBER ABOVE 0
