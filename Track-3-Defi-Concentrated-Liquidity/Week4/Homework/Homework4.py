@@ -28,22 +28,6 @@ X0_ad_1 = (Z**2/((A**2)*(Y0_1+((B*Z)/A))))-(Z/(A*(A+B))) # RANDOM X BETWEEN MIN 
 Y0_2 = float(randint(0,Z)) #Z**2/(A**2*(X0_ad_1+(Z/(A*(A+B)))))-(B*Z/A)
 X0_ad_2 = (Z**2/((A**2)*(Y0_2+((B*Z)/A))))-(Z/(A*(A+B))) # RANDOM X BETWEEN MIN AND MAX X => MAX X IS ARBITRARY
 
-# # INITIALIZE BONDING CURVES
-# def initialize(A,B,Z):
-#     yplot_1 = np.linspace(0, Z, 500) # First plot
-#     yplot_2 = np.linspace(0, Z, 500)
-    
-#     xplot_ad_1 = (Z**2/((A**2)*(yplot_1+((B*Z)/A))))-(Z/(A*(A+B)))
-#     xplot_ad_2 = (Z**2/((A**2)*(yplot_2+((B*Z)/A))))-(Z/(A*(A+B)))
-    
-#     dydxplot1 = -(Z**2*(A+B)**2)/(xplot_ad_1*A*(A+B)+Z)**2
-#     dydxplot2 = -(Z**2*(A+B)**2)/(xplot_ad_2*A*(A+B)+Z)**2
-    
-#     return xplot_ad_1, xplot_ad_2, yplot_1, yplot_2, dydxplot1, dydxplot2
-
-# # INITIALIZE SEPARATE UNISWAP BONDING CURVES
-# xplot_ad_1, xplot_ad_2, yplot_1, yplot_2, dydxplot1, dydxplot2 = initialize(A,B,Z) # UNI CURVE 1
-
 xplot_ad_1_list = []
 xplot_ad_2_list = []
 yplot1_list = []
